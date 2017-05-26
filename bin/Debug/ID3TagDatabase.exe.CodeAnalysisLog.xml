@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\adamd\Documents\Visual Studio 2017\Projects\Login 0_2\WindowsApplication1\WindowsApplication1\bin\Debug\ID3TagDatabase.exe">
+   <Modules>
+    <Module Name="id3tagdatabase.exe">
+     <Namespaces>
+      <Namespace Name="ID3TagDatabase">
+       <Types>
+        <Type Name="ID3DataGridForm" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="WaveOutDevice" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2017-05-26 15:34:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\adamd\Documents\Visual Studio 2017\Projects\Login 0_2\WindowsApplication1\WindowsApplication1" File="DataGridForm.Designer.vb" Line="7">'ID3DataGridForm' contains field 'ID3DataGridForm.WaveOutDevice' that is of IDisposable type: 'IWavePlayer'. Change the Dispose method on 'ID3DataGridForm' to call Dispose or Close on this field.</Issue>
+            </Message>
+            <Message Id="audiofilereader" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2017-05-26 15:34:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\adamd\Documents\Visual Studio 2017\Projects\Login 0_2\WindowsApplication1\WindowsApplication1" File="DataGridForm.Designer.vb" Line="7">'ID3DataGridForm' contains field 'ID3DataGridForm.audiofilereader' that is of IDisposable type: 'AudioFileReader'. Change the Dispose method on 'ID3DataGridForm' to call Dispose or Close on this field.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ID3InfoDataSet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-05-26 15:34:22Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'ID3InfoDataSet'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ID3InfoDataSet+ID3InfoDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-05-26 15:34:22Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'ID3InfoDataSet.ID3InfoDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+   <Name>Disposable fields should be disposed</Name>
+   <Description>If a type that implements IDisposable owns fields that also implement IDisposable, the encapsulating type's Dispose() implementation should call Dispose() on each disposable field.</Description>
+   <Resolution Name="Default">{0} contains field {1} that is of IDisposable type: {2}. Change the Dispose method on {0} to call Dispose or Close on this field.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182328.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240">
+   <Name>Implement ISerializable correctly</Name>
+   <Description>If a type is assignable to ISerializable, it should implement GetObjectData. For unsealed types, the GetObjectData method should be callable and overridable by derived types.</Description>
+   <Resolution Name="Default">Add an implementation of GetObjectData to type {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182342.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="60">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

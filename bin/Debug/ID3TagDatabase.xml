@@ -1,0 +1,101 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ID3TagDatabase
+</name>
+</assembly>
+<members>
+<member name="T:ID3TagDatabase.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ID3TagDatabase.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ID3TagDatabase.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:ID3TagDatabase.My.Resources.Resources.PlayButton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ID3TagDatabase.My.Resources.Resources.StopButton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:ID3TagDatabase.ID3InfoDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ID3TagDatabase.ID3InfoDataSet.ID3InfoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ID3TagDatabase.ID3InfoDataSet.ID3InfoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ID3TagDatabase.ID3InfoDataSet.ID3InfoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ID3TagDatabase.ID3InfoDataSetTableAdapters.ID3InfoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ID3TagDatabase.ID3InfoDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ID3TagDatabase.ID3InfoDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ID3TagDatabase.ID3InfoDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ID3TagDatabase.ID3InfoDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ID3TagDatabase.ID3InfoDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ID3TagDatabase.ID3InfoDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ID3TagDatabase.ID3InfoDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ID3TagDatabase.ID3InfoDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ID3TagDatabase.ID3InfoDataSetTableAdapters.TableAdapterManager.UpdateAll(ID3TagDatabase.ID3InfoDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ID3TagDatabase.ID3InfoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ID3TagDatabase.ID3InfoDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>
